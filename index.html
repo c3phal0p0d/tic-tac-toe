@@ -11,33 +11,30 @@
 <body>
     <div id="start-screen">
         <h1>tic tac toe</h1>
-        <button id="start-game-button" onclick="displayGame()">start game</button>
+        <button id="start-game-button" onclick="DisplayController.startGame()">start game</button>
     </div>
-    <div id="game">
-        <div class="player" id="player-1">
-            <h3>Player 1</h3>
-            <span class="score">score: o</span>
-        </div>
-        <table id="board">
-            <tr>
-                <td>x</td>
-                <td>o</td>
-                <td>x</td>
-            </tr>
-            <tr>
-                <td>x</td>
-                <td>x</td>
-                <td>o</td>
-            </tr>
-            <tr>
-                <td>x</td>
-                <td>o</td>
-                <td>x</td>
-            </tr>
-        </table>
-        <div class="player" id="player-2">
-            <h3>Player 2</h3>
-            <span class="score">score: o</span>
+        <div id="game">
+            <div class="player" id="player-1">
+                <h3>Player 1</h3>
+                <span class="score">score: o</span>
+            </div>
+            <div>
+                <div id="board-container">
+                    <table id="board">
+                    
+                    </table>
+                </div>
+                <button id="restart-game-button" onclick="DisplayController.restartGame()">restart</button>
+            </div>
+            <div class="player" id="player-2">
+                <h3>Player 2</h3>
+                <span class="score">score: o</span>
+            </div>
+            <div class="end-game-popup-container">
+                <div class="end-game-popup">
+                    Player won!
+                </div>
+            </div>
         </div>
     </div>
 </body>
